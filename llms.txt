@@ -1,0 +1,55 @@
+# Unsettled
+
+> Unsettled: Impossible Escape is a spy puzzle game for iPhone, hidden in an ordinary-looking phone. Each message is a lock, and every lock gives up a number.
+
+Available now on the App Store.
+
+Key facts:
+
+- Platform: iPhone, iOS 18 or later
+- Price: chapters one and two are free; chapter three is a one-off £2.99 unlock; three extra hints cost £0.99
+- Privacy: no account, no ads, no tracking; nothing leaves the phone
+- Content: three chapters and thirty-five locks
+- Developer: Mat Benfield (thechelsuk), made in the UK
+
+## Links
+
+- [Unsettled website](https://unsettled.thechels.uk/): the official marketing site
+- [App Store](https://apps.apple.com/gb/app/unsettled-impossible-escape/id6819058615): download the app
+- [Privacy policy](https://thechels.uk/app/privacy): what the app does and does not collect
+- [Project page](https://thechels.uk/projects/unsettled): background from the developer
+
+## Features
+
+- Escape room puzzles hidden in an ordinary-looking phone
+- Ciphers, codes and riddles whose answers are numbers
+- Three chapters and thirty-five locks
+- A sealed message at the end of each chapter
+- Hints earned every five levels
+
+## FAQ
+
+### Is Unsettled really impossible?
+
+No, but it is hard. Every level is tested to have exactly one answer, and everything you need is already in front of you.
+
+### Is there a walkthrough?
+
+No. That's the point. Earn a hint every five levels, or buy a hint pack if you're truly stuck.
+
+### Is it suitable for escape room fans?
+
+Yes. Unsettled is a digital escape room where the room is a phone: ciphers, hidden clues and misdirection, with a spy story told through sealed messages.
+
+### How much does it cost?
+
+Chapters one and two are free. Chapter three is a one-off £2.99 unlock, and three extra hints cost £0.99. There are no ads.
+
+### Which devices are supported?
+
+iPhone running iOS 18 or later.
+
+## Optional
+
+- [Site source on GitHub](https://github.com/thechelsuk/uk.thechels.unsettled): static HTML and CSS for this site
+- [More apps by thechelsuk](https://thechels.uk/projects): the developer's other apps and projects

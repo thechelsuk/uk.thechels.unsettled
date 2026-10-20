@@ -33,6 +33,7 @@ jobs:
           test -s CNAME
           test -s robots.txt
           test -s sitemap.xml
+          test -s llms.txt
           test -s images/unsettled-app-icon.png
           test -s images/og-image.png
           test -s images/app-store-badge.svg
@@ -48,7 +49,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           mkdir -p _site/images
-          cp CNAME index.html styles.css robots.txt sitemap.xml _site/
+          cp CNAME index.html styles.css robots.txt sitemap.xml llms.txt _site/
           cp images/unsettled-app-icon.png images/og-image.png images/app-store-badge.svg images/shot-01-start.jpg images/shot-02-message.jpg images/shot-03-inbox.jpg images/shot-04-notebook.jpg images/shot-05-tiles.jpg images/shot-06-phone.jpg images/shot-08-dial.jpg _site/images/
 
       - name: Configure GitHub Pages
