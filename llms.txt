@@ -49,6 +49,14 @@ Chapters one and two are free. Chapter three is a one-off £2.99 unlock, and thr
 
 iPhone running iOS 18 or later.
 
+### Found a bug or have an idea?
+
+Tell me on GitHub: [raise an issue](https://github.com/thechelsuk/uk.thechels.unsettled/issues/new/choose) and choose the form for a bug, a feature request, a question or general feedback. You'll need a free GitHub account.
+
+### Can I just email you?
+
+Yes. Email feedback@thechels.uk with Unsettled in the subject.
+
 ## Optional
 
 - [Site source on GitHub](https://github.com/thechelsuk/uk.thechels.unsettled): static HTML and CSS for this site
