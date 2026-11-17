@@ -1,79 +1,19 @@
-name: Build and deploy GitHub Pages
+name: Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-
-concurrency:
-  group: github-pages
-  cancel-in-progress: false
+  pages: write
+  id-token: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-    steps:
-      - name: Check out site
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: Verify static site files
-        run: |
-          test -s index.html
-          test -s styles.css
-          test -s CNAME
-          test -s favicon.ico
-          test -s robots.txt
-          test -s sitemap.xml
-          test -s llms.txt
-          test -s images/unsettled-app-icon.png
-          test -s images/og-image.png
-          test -s images/app-store-badge.svg
-          test -s images/shot-01-start.jpg
-          test -s images/shot-02-message.jpg
-          test -s images/shot-03-inbox.jpg
-          test -s images/shot-04-notebook.jpg
-          test -s images/shot-05-tiles.jpg
-          test -s images/shot-06-phone.jpg
-          test -s images/shot-08-dial.jpg
-
-      - name: Assemble Pages site
-        if: github.event_name != 'pull_request'
-        run: |
-          mkdir -p _site/images
-          cp CNAME index.html styles.css robots.txt sitemap.xml llms.txt favicon.ico _site/
-          cp images/unsettled-app-icon.png images/og-image.png images/app-store-badge.svg images/shot-01-start.jpg images/shot-02-message.jpg images/shot-03-inbox.jpg images/shot-04-notebook.jpg images/shot-05-tiles.jpg images/shot-06-phone.jpg images/shot-08-dial.jpg _site/images/
-
-      - name: Configure GitHub Pages
-        if: github.event_name != 'pull_request'
-        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-
-      - name: Upload static site
-        if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
-        with:
-          path: _site
-
-  deploy:
-    if: github.event_name != 'pull_request'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
+  pages:
+    uses: thechelsuk/workflows/.github/workflows/pages.yml@main
+    with:
+      build: static
